@@ -7,7 +7,7 @@
 [![React](https://img.shields.io/badge/React-18+-blue.svg)](https://reactjs.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-#因部分依赖文件过大，导致无法上传，需重新按照依赖，运行 npm install命令
+#因部分依赖文件过大，导致无法上传，需重新按照依赖，需在根目录及 backend 中运行 npm install 命令
 
 ## 🌟 功能特性
 
