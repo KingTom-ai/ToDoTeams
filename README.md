@@ -7,6 +7,8 @@
 [![React](https://img.shields.io/badge/React-18+-blue.svg)](https://reactjs.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+#Because some dependencies are too large and cannot be uploaded, you need to run the npm install command according to the dependencies again
+
 ## 🌟 Features
 
 - ✅ **Task Management**: Create, assign, and track task progress
