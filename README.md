@@ -7,7 +7,7 @@
 [![React](https://img.shields.io/badge/React-18+-blue.svg)](https://reactjs.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-#Because some dependencies are too large and cannot be uploaded, you need to run the npm install command according to the dependencies again
+#Because some dependencies are too large and cannot be uploaded, you need to follow the dependencies again, and you need to run the npm install command in the root directory and backend
 
 ## 🌟 Features
 
