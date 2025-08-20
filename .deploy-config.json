@@ -1,0 +1,8 @@
+{
+  "mongodbUri": "mongodb://localhost:27017/todolist_team",
+  "port": 5001,
+  "frontendUrl": "http://192.168.67.42:5001",
+  "emailUser": "",
+  "hasEmailConfig": false,
+  "lastUpdated": "2025-08-20T13:13:51.992Z"
+}

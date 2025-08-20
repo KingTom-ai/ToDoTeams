@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理系统 - 控制台</title>
+    <link rel="stylesheet" href="/admin/css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- 侧边栏 -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>管理系统</h2>
+                <div class="user-info">
+                    <span id="currentUser">管理员</span>
+                    <button id="logoutBtn" class="logout-btn">退出</button>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" data-section="overview" class="nav-link active">概览</a></li>
+                <li><a href="#" data-section="users" class="nav-link">用户管理</a></li>
+                <li><a href="#" data-section="teams" class="nav-link">团队管理</a></li>
+                <li><a href="#" data-section="tasks" class="nav-link">任务管理</a></li>
+                <li><a href="#" data-section="messages" class="nav-link">消息中心</a></li>
+                <li><a href="#" data-section="groups" class="nav-link">组管理</a></li>
+                <li><a href="#" data-section="system" class="nav-link">系统监控</a></li>
+                <li><a href="#" data-section="analytics" class="nav-link">统计分析</a></li>
+            </ul>
+        </nav>
+
+        <!-- 主内容区 -->
+        <main class="main-content">
+            <div class="content-header">
+                <h1 id="pageTitle">系统概览</h1>
+            </div>
+            
+            <!-- 概览页面 -->
+            <div id="overview-section" class="content-section active">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>总用户数</h3>
+                        <div class="stat-number" id="totalUsers">-</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>总团队数</h3>
+                        <div class="stat-number" id="totalTeams">-</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>总任务数</h3>
+                        <div class="stat-number" id="totalTasks">-</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>活跃用户</h3>
+                        <div class="stat-number" id="activeUsers">-</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 用户管理页面 -->
+            <div id="users-section" class="content-section">
+                <div class="section-header">
+                    <div class="header-controls">
+                        <div class="search-box">
+                            <input type="text" id="userSearchInput" placeholder="搜索用户..." class="search-input">
+                            <button id="userSearchBtn" class="btn btn-secondary">搜索</button>
+                        </div>
+                        <button id="addUserBtn" class="btn btn-primary">添加用户</button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table id="usersTable" class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>用户名</th>
+                                <th>邮箱</th>
+                                <th>角色</th>
+                                <th>状态</th>
+                                <th>创建时间</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 团队管理页面 -->
+            <div id="teams-section" class="content-section">
+                <div class="section-header">
+                    <div class="header-controls">
+                        <div class="search-box">
+                            <input type="text" id="teamSearchInput" placeholder="搜索团队..." class="search-input">
+                            <button id="teamSearchBtn" class="btn btn-secondary">搜索</button>
+                        </div>
+                        <button id="addTeamBtn" class="btn btn-primary">创建团队</button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table id="teamsTable" class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>团队名称</th>
+                                <th>描述</th>
+                                <th>所有者</th>
+                                <th>成员数</th>
+                                <th>创建时间</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 任务管理页面 -->
+            <div id="tasks-section" class="content-section">
+                <div class="table-container">
+                    <table id="tasksTable" class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>任务标题</th>
+                                <th>所属团队</th>
+                                <th>创建者</th>
+                                <th>状态</th>
+                                <th>优先级</th>
+                                <th>创建时间</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 消息中心页面 -->
+            <div id="messages-section" class="content-section">
+                <div class="section-header">
+                    <button id="sendMessageBtn" class="btn btn-primary">发送消息</button>
+                </div>
+                <div class="table-container">
+                    <table id="messagesTable" class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>发送者</th>
+                                <th>接收者</th>
+                                <th>内容</th>
+                                <th>类型</th>
+                                <th>状态</th>
+                                <th>发送时间</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 组管理页面 -->
+            <div id="groups-section" class="content-section">
+                <div class="section-header">
+                    <button id="addGroupBtn" class="btn btn-primary">创建组</button>
+                </div>
+                <div class="table-container">
+                    <table id="groupsTable" class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>组名称</th>
+                                <th>描述</th>
+                                <th>创建者</th>
+                                <th>成员数</th>
+                                <th>创建时间</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 系统监控页面 -->
+            <div id="system-section" class="content-section">
+                <div class="section-header">
+                    <button id="refreshSystemBtn" class="btn btn-secondary">刷新数据</button>
+                </div>
+                <div class="system-info" style="height: calc(100vh - 200px); overflow-y: auto;">
+                    <div class="info-card">
+                        <h3>系统性能</h3>
+                        <div id="systemPerformance">加载中...</div>
+                    </div>
+                    <div class="info-card">
+                        <h3>系统日志</h3>
+                        <div id="systemLogs">加载中...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 统计分析页面 -->
+            <div id="analytics-section" class="content-section">
+                <div class="analytics-grid" style="height: calc(100vh - 200px); overflow-y: auto;">
+                    <div class="chart-card">
+                        <h3>用户活跃度</h3>
+                        <div id="userActivityChart">图表加载中...</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- 模态框 -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="/admin/js/dashboard.js"></script>
+</body>
+</html>

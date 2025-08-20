@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <!-- 背景圆形 -->
+  <circle cx="128" cy="128" r="120" fill="#f0f7ff"/>
+  
+  <!-- 圆环边框 -->
+  <circle cx="128" cy="128" r="116" fill="none" stroke="#3b82f6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- 团队协作元素 - 三个小人图标 -->
+  <g transform="translate(60, 100)">
+    <!-- 第一个人 -->
+    <circle cx="25" cy="15" r="15" fill="#3b82f6"/>
+    <path d="M25 30 L25 55 L15 70 L35 70 Z" fill="#3b82f6"/>
+    
+    <!-- 第二个人 -->
+    <circle cx="65" cy="15" r="15" fill="#60a5fa"/>
+    <path d="M65 30 L65 55 L55 70 L75 70 Z" fill="#60a5fa"/>
+    
+    <!-- 第三个人 -->
+    <circle cx="105" cy="15" r="15" fill="#93c5fd"/>
+    <path d="M105 30 L105 55 L95 70 L115 70 Z" fill="#93c5fd"/>
+  </g>
+  
+  <!-- 任务元素 - 勾选框 -->
+  <g transform="translate(75, 170)">
+    <rect x="0" y="0" width="100" height="30" rx="5" ry="5" fill="none" stroke="#3b82f6" stroke-width="4"/>
+    <path d="M20 15 L45 40 L90 5" fill="none" stroke="#22c55e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- 连接线条 - 表示团队协作完成任务 -->
+  <path d="M128 135 L128 170" fill="none" stroke="#60a5fa" stroke-width="2" stroke-dasharray="5,3"/>
+</svg>

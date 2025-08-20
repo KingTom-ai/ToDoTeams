@@ -1,0 +1,142 @@
+/* 全局样式 */
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background: var(--app-background-gradient);
+}
+
+/* 响应式布局 */
+.main-layout {
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.content-area {
+  padding: 24px;
+  background: var(--content-background);
+  min-height: calc(100vh - 48px);
+  border-radius: 8px 0 0 0;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* 卡片动画效果 */
+.task-card {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.task-item-card {
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-item-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.task-item-card .ant-card-body {
+  position: relative;
+}
+
+.task-item-card .ant-btn {
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.task-item-card:hover .ant-btn {
+  opacity: 1;
+}
+
+/* 搜索框样式 */
+.search-container {
+  margin-bottom: 24px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  max-width: 400px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 按钮样式 */
+.action-button {
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.action-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .content-area {
+    margin-left: 0;
+    padding: 16px;
+  }
+  
+  .search-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-input {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .content-area {
+    padding: 12px;
+  }
+}
+
+/* 加载动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* 快捷键提示 */
+.keyboard-shortcut {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.keyboard-shortcut.show {
+  opacity: 1;
+}

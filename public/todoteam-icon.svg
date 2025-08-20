@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- 背景圆形 -->
+  <circle cx="256" cy="256" r="240" fill="#165DFF"/>
+  
+  <!-- 团队协作元素 - 三个人形图标 -->
+  <!-- 左侧人物 -->
+  <g transform="translate(170, 180)">
+    <circle cx="0" cy="-30" r="20" fill="white"/>
+    <path d="M-25,10 L25,10 L20,60 L-20,60 Z" fill="white"/>
+  </g>
+  
+  <!-- 中间人物 -->
+  <g transform="translate(256, 160)">
+    <circle cx="0" cy="-30" r="25" fill="white"/>
+    <path d="M-30,10 L30,10 L25,80 L-25,80 Z" fill="white"/>
+  </g>
+  
+  <!-- 右侧人物 -->
+  <g transform="translate(342, 180)">
+    <circle cx="0" cy="-30" r="20" fill="white"/>
+    <path d="M-25,10 L25,10 L20,60 L-20,60 Z" fill="white"/>
+  </g>
+  
+  <!-- 任务列表元素 -->
+  <g transform="translate(200, 300)">
+    <rect x="0" y="0" width="220" height="40" rx="10" fill="white"/>
+    <rect x="25" y="15" width="15" height="15" rx="3" fill="#165DFF"/>
+    <path d="M40,23 L45,28 L55,18" stroke="white" stroke-width="3" fill="none"/>
+    
+    <rect x="0" y="50" width="180" height="40" rx="10" fill="white" opacity="0.8"/>
+    <rect x="25" y="65" width="15" height="15" rx="3" fill="#165DFF" opacity="0.8"/>
+  </g>
+</svg>
