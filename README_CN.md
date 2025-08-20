@@ -7,6 +7,8 @@
 [![React](https://img.shields.io/badge/React-18+-blue.svg)](https://reactjs.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+#因部分依赖文件过大，导致无法上传，需重新按照依赖，运行 npm install命令
+
 ## 🌟 功能特性
 
 - ✅ **任务管理**：创建、分配、跟踪任务进度
